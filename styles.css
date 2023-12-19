@@ -1,0 +1,768 @@
+
+#scroll-to-top {
+    position: fixed;
+    bottom: 10%;
+    right: 20px;
+    z-index: 10;
+    display: none;
+    background-color: rgba(190, 190, 190, 0.42);
+    color: #212121a6;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    border-radius: 33%;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+#scroll-to-top a {
+    text-decoration: none;
+    color: inherit;
+    position: absolute;
+    right: 10px;
+    font-size: 30px;
+    bottom: -7px;
+}
+
+#scroll-to-top:hover{
+    background-color: rgba(190,190,190, 0.82);
+}
+
+
+
+/*SECTION1*/
+
+.section1{
+  font-family: 'Albert Sans';
+  padding: 0 20px;
+}
+.navbar-brand h3{
+  font-size: 30px;
+  color: rgb(24, 12, 0, 0.847);
+}
+
+
+
+
+/*section 2*/
+
+
+  @keyframes slideAnimation {
+    0% {
+      transform: translateX(-100%);
+    }
+    50% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes colorChange {
+    0% {
+      background-color: rgba(158, 137, 137, 0.747);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    100% {
+      background-color: rgba(158, 137, 137, 0.747);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  @keyframes fadeInBackground {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .cover_page {
+    background-image: url('images/charming-pampered-pets-play-side-by-side-looking-alert-generated-by-ai.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+    position: relative;
+    /* The '4s' delay in fadeInBackground ensures it starts 4 seconds after the animations begin */
+  }
+
+  .heading-for-cover {
+    background-color: rgba(158, 137, 137, 0.747);
+    display: block;
+    width: 70%;
+    align-items: center;
+    position: absolute;
+    justify-content: center;
+    left: 16%;
+    bottom: 30%;
+    padding: 30px;
+    border-radius: 10px;
+    animation: slideAnimation 2s forwards, colorChange 2s forwards;
+  }
+
+  .heading-for-cover h1 {
+    text-align: center;
+    color: rgb(37, 36, 33);
+    text-transform: uppercase;
+    font-family: 'Albert Sans', sans-serif;
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+
+  .heade-cover-1,
+  .heade-cover-2 {
+    display: inline-block;
+    opacity: 1;
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+
+  
+  .heade-cover-1 {
+    font-size: 60px;
+    color: rgba(255, 255, 255, 0.82);
+    animation-name: fadeInFromLeft;
+    animation-delay: 2s;
+  }
+
+  .heade-cover-2 {
+    color: rgba(255, 255, 255, 0.82);
+    animation-name: fadeInFromRight;
+    animation-delay: 4s;
+    font-size: 25px;
+  }
+
+
+  /*ANIMATIONS*/
+
+  @keyframes fadeInFromLeft {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fadeInFromRight {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  /*BUTTON CODE*/
+  .myButton1 {
+    box-shadow:inset 0px 1px 0px 0px #a6827e;
+    
+    background-color:#ad8d6d;
+    border-radius:3px;
+    border:1px solid transparent;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:13px;
+    padding:6px 24px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #4d3534;
+  }
+  .myButton1:hover {
+    background-color:#ad8155;
+  }
+  .myButton1:active {
+    position:relative;
+    top:1px;
+  }
+  .Adopt_now{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+          
+
+  /* SECTION3 */
+  .section3{
+    font-family: 'Albert Sans';
+    background-color: white;
+    padding: 80px 0;
+  }
+  .sec-3-header h2{
+    text-align: center;
+
+  }
+
+
+
+  /* SECTION4 */
+
+  .section4 {
+    padding: 40px 0;
+    text-align: center;
+    background-color: whites;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+  }
+
+  .fade-in {
+    opacity: 1;
+  }
+
+  .slide-from-above,
+  .slide-from-below {
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+    transform: translateY(20px);
+  }
+
+  .section4 .fade-in .slide-from-above.visible,
+  .section4 .fade-in .slide-from-below.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  /* Common styles for all resolutions */
+.how-it-works-heading h1 {
+  text-align: center;
+}
+
+.how-it-works-content {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.img-explore, .img-connect, .img-embrace {
+  width: 75px;
+}
+
+.img-explore-head h2, .img-connect-head h2, .img-embrace-head h2 {
+  font-weight: 500;
+  font-family: 'Albert Sans';
+  padding-top: 10px;
+  font-size: 27px;
+}
+
+.img-explore-context h4, .img-connect-context h4, .img-embrace-context h4 {
+  font-weight: 300;
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .heade-cover-1{
+    font-size: 45px;
+  }
+  .heade-cover-2{
+    font-size: 19px;
+  }
+  
+}
+/* Tablet Styles - up to 768px */
+@media only screen and (max-width: 768px) {
+  .img-explore, .img-connect, .img-embrace {
+    width: 50px; /* Adjust the width for tablet */
+  }
+
+  .img-explore-head h2, .img-connect-head h2, .img-embrace-head h2 {
+    font-size: 24px; /* Adjust the font size for tablet */
+  }
+
+  .img-explore-context h4, .img-connect-context h4, .img-embrace-context h4 {
+    font-size: 16px; /* Adjust the font size for tablet */
+  }
+  .heade-cover-1{
+    font-size: 35px;
+  }
+  .heade-cover-2{
+    font-size: 17px;
+  }
+  
+}
+
+/* Mobile Styles - up to 425px */
+@media only screen and (max-width: 425px) {
+  .img-explore, .img-connect, .img-embrace {
+    width: 40px; /* Adjust the width for mobile */
+  }
+
+  .img-explore-head h2, .img-connect-head h2, .img-embrace-head h2 {
+    font-size: 20px; /* Adjust the font size for mobile */
+  }
+
+  .img-explore-context h4, .img-connect-context h4, .img-embrace-context h4 {
+    font-size: 14px; /* Adjust the font size for mobile */
+  }
+  .heade-cover-1{
+    font-size: 30px;
+  }
+  .heade-cover-2{
+    font-size: 15px;
+  }
+}
+
+
+
+
+
+
+
+
+ /* SECTION5 */
+ .section5 {
+  background-color: rgba(233, 233, 233, 0.58);
+  padding: 100px 0;
+  font-family: 'Albert Sans';
+  position: relative;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.paw-print {
+  width: 70px;
+  rotate: 20deg;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+}
+
+.sec-5-header, .sec-5-context {
+  text-align: center;
+  display: block;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+.sec-5-context-head{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.sec-5-header.show, .sec-5-context.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sec-5-header h1 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 50px;
+}
+
+.sec-5-header h4 {
+  color: black;
+  font-size: 17px;
+  opacity: 0.75;
+}
+
+.sec-5-context {
+  padding-top: 40px;
+}
+
+.sec-5-context-head, .sec-5-context p {
+  padding-right: 50px;
+  text-align: left;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.sec-5-context.show .sec-5-context-head, .sec-5-context.show p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Add styles for the fade-in effect */
+.section5.fade-in {
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CSS for Section 6 */
+/* Animation Keyframes */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+.section6 {
+  text-align: center;
+  padding: 100px 0;
+  font-family: 'Albert Sans';
+  background-color: rgba(233, 233, 233, 0.58);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+}
+
+/* Fade-in animation */
+.section6.fade-in {
+  opacity: 1;
+  visibility: visible;
+}
+
+.sec-6-header h2 {
+  font-size: 50px;
+  padding-bottom: 15px;
+}
+
+.sec-6-header h5 {
+  font-size: 17px;
+  opacity: 0.85;
+  line-height: 1.5;
+}
+
+/* Styles for sustainable icons and text */
+.sustainable_icon, .sustainable-text {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+/* Show animation for sustainable icons and text */
+.sustainable_icon.show, .sustainable-text.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.sec-6-header h2 {
+  font-size: 50px;
+  padding-bottom: 15px;
+}
+
+.sec-6-header h5 {
+  font-size: 17px;
+  opacity: 0.85;
+  line-height: 1.5;
+}
+
+.sustainable_icon {
+  padding-top: 50px;
+  display: inline-block;
+}
+
+.sustainable-img-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 150px;
+  border: 1px solid rgb(26, 26, 26);
+  border-radius: 20%;
+}
+
+.sustainable-img {
+  width: 70px;
+}
+
+.sustainable-img-heading {
+  display: block;
+  padding-top: 20px;
+}
+
+.sustainable-img-wrapper-outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sustainable-text h5 {
+  opacity: 0.85;
+  line-height: 1.5;
+  padding-top: 50px;
+  font-size: 17px;
+}
+
+.sustainable-text h6 {
+  opacity: 0.85;
+  padding-top: 20px;
+  line-height: 1.5;
+  font-size: 17px;
+}
+
+/* Media Query for Tablets */
+@media (max-width: 768px) {
+  .sustainable-img-wrapper {
+    height: 150px;
+    width: 100px;
+  }
+
+  .sustainable-img {
+    width: 50px;
+  }
+
+  .sustainable-img-heading h5 {
+    font-size: 15px;
+    padding-top: 15px;
+  }
+
+  .sustainable-text h5,
+  .sustainable-text h6 {
+    font-size: 14px;
+    padding-top: 30px;
+  }
+}
+
+/* Media Query for Mobile Phones */
+@media (max-width: 425px) {
+  .sustainable-img-wrapper {
+    height: 100px;
+    width: 70px;
+  }
+
+  .sustainable-img {
+    width: 40px;
+  }
+
+  .sustainable-img-heading h5 {
+    font-size: 12px;
+    padding-top: 10px;
+  }
+
+  .sustainable-text h5,
+  .sustainable-text h6 {
+    font-size: 12px;
+    padding-top: 20px;
+  }
+
+  .sec-6-header h2 {
+    font-size: 30px;
+    padding-bottom: 10px;
+  }
+
+  .sec-6-header h5 {
+    font-size: 14px;
+  }
+}
+/* Add the hidden class definition */
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+}
+
+
+
+
+
+
+.section7 {
+  padding: 100px 0;
+  background-color: white;
+  font-family: 'Albert Sans';
+}
+
+.sec-7-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.accordian1 {
+  padding: 50px 0;
+}
+
+.accordion-item {
+  --bs-accordion-active-bg: #efefef;
+  --bs-accordion-btn-bg: #ffffff;
+  --bs-accordion-bg: #ffffff;
+  opacity: 0; /* Initially set opacity to 0 for fade-in effect */
+  transform: translateY(20px); /* Initially move the items down for fade-in effect */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.accordion-item.show {
+  opacity: 1; /* Show the items with fade-in effect */
+  transform: translateY(0); /* Move the items back to their original position */
+}
+
+.accordion-button:not(.collapsed),
+.accordion-button:not(.collapsed):focus {
+  box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px;
+}
+
+.accordion-button {
+  box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px;
+}
+
+.accordion-button {
+  --bs-accordion-btn-focus-box-shadow: none;
+}
+
+.accordion-body {
+  font-size: 13.5px;
+  color: #000000e5;
+}
+
+.carouse-testi {
+  width: 100%;
+  position: relative;
+  height: 60%;
+}
+
+.name_loc {
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.918);
+  position: absolute;
+  font-style: italic;
+  border-radius: 20px;
+  padding: 10px 20px;
+  bottom: 20px;
+  right: 20px;
+}
+
+.name_loc p {
+  display: block;
+  font-size: 10px;
+  margin: 0;
+}
+
+.name_loc p span {
+  text-align: right;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: bold;
+}
+
+
+
+
+/*footer-0*/
+
+.footer-0{
+  padding-top: 30px;
+  padding-bottom: 50px;
+  background-color:rgba(233, 233, 233, 0.58);
+  font-family: 'Albert Sans';
+  text-align: center;
+}
+.footer-0 h1{
+  opacity: 0.9;
+}
+.social{
+  font-size: 25px;
+  padding: 10px;
+  opacity: 0.619;
+  color: rgb(21, 21, 21);
+}
+a:hover .social{
+  opacity: 1;
+}
+.tooltip6 {
+  position: relative;
+  display: inline-block;
+}
+.tooltip6 .tooltiptext6{
+  visibility: hidden;
+  opacity: 0.7;
+  width: 120px;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  background-color: rgb(58, 58, 58);
+  padding: 3px 0;
+  position: absolute;
+  z-index: 1;
+  top: 120%;
+  left: 50%;
+  margin-left: -60px;
+  transition: all 0.05s linear;
+}
+.tooltip6 .tooltiptext6::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent rgb(58, 58, 58);
+}
+.tooltip6:hover .tooltiptext6 {
+  opacity: 1;
+  visibility: visible;
+}
+.contact-info{
+  padding-top: 20px;
+  text-align: left;
+}
+.contact-info h4{
+  font-size: 27.5px;
+  padding-bottom: 10px;
+  font-weight: 500;
+}
+.contact-info h6{
+  padding-bottom: 5px;
+}
+.contact-info a{
+  color: black;
+
+}
+.contact-img{
+  padding-right: 2px;
+  width: 16px;
+}
+.underline {
+  text-decoration: none;
+  position: relative;
+  color: #392f2b;
+}
+
+.container a.underline {
+  display: inline-block;
+}
+
+.container a.underline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top:25px;
+  width: 0;
+  height: 1.8px;
+  background-color: #483c32db;
+  transition: width 2s;
+}
+
+.container a.underline:hover::before {
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+/*FOOTER*/
+
+.footer{
+  background-color: rgb(62, 62, 62);
+  padding: 20px 0;
+  color: white;
+  font-family: 'Albert Sans';
+}
+.footer h5{
+  margin: 0;
+  font-size: 18px;
+  padding: 0 20px;
+
+}
